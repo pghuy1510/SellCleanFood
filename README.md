@@ -22,4 +22,4 @@ Tạo ra một trang Web demo có:
 
 • Backend: Java, Java spring boot
 
-• Cơ sở dữ liệu : MongoDB(lưu trữ dữ liệu người dùng và người mua)
+• Cơ sở dữ liệu : MySql(lưu trữ dữ liệu người dùng và người mua)
