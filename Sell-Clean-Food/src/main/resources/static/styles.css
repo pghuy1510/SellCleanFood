@@ -110,9 +110,33 @@ a:hover {
   font-size: 1.4rem;
   font-weight: 500;
 }
-
 .header_info a {
   padding: 0 10px;
+  text-decoration: none;
+  font-weight: 500;
+}
+#account-section span {
+  margin-right: 10px; /* Khoảng cách giữa "Xin chào" và giỏ hàng */
+  color: #fff; /* Màu trắng để phù hợp với giao diện */
+}
+
+#logout-link {
+  color: #fff; /* Màu trắng cho nút "Đăng xuất" */
+  margin-left: 10px; /* Khoảng cách giữa "Xin chào" và "Đăng xuất" */
+  cursor: pointer; /* Hiển thị biểu tượng con trỏ khi hover */
+}
+
+#logout-link:hover {
+  color: #86bc42; /* Hiệu ứng hover cho nút "Đăng xuất" */
+}
+#account-section a:last-child {
+  border-right: 1px solid #fff;
+  margin-right: 10px; /* Tạo khoảng cách giữa Đăng nhập/Đăng ký và giỏ hàng */
+}
+
+.header_info-right a[href="./giohang.html"] {
+  position: relative;
+  top: -5px; /* Điều chỉnh giá trị này để đẩy biểu tượng giỏ hàng lên */
 }
 
 .header_info i,
@@ -120,11 +144,6 @@ a:hover {
   font-size: 2rem;
   padding: 6px;
 }
-
-.header_info-right a:nth-child(2) {
-  border-right: 1px solid #fff;
-}
-
 .header_info-right i {
   padding: 0;
   margin-top: 10px;
@@ -132,6 +151,10 @@ a:hover {
 
 .header_info-right {
   position: relative;
+  display: flex;
+  align-items: center; /* Căn giữa theo chiều dọc */
+  justify-content: flex-end;
+  border-right: none;
 }
 
 .cart_number {
@@ -1209,7 +1232,6 @@ a:hover {
   color: #86bc42;
 }
 
-
 .fruit_box_buy {
   display: flex;
   align-items: center;
@@ -1419,4 +1441,34 @@ a:hover {
   padding-bottom: 8px;
   border-bottom: 5px solid #86bc42;
   transition: linear 0.2s;
+}
+
+/* //tesst */
+
+/* Ẩn menu thả xuống theo mặc định */
+.hidden {
+  display: none;
+}
+
+/* Kiểu cho dropdown menu */
+#dropdown-menu {
+  position: absolute;
+  background-color: white;
+  border: 1px solid #ccc;
+  box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.2);
+  z-index: 1;
+  width: 150px;
+  padding: 10px;
+}
+
+/* Kiểu cho các liên kết trong menu */
+#dropdown-menu a {
+  text-decoration: none;
+  display: block;
+  padding: 8px;
+  color: black;
+}
+
+#dropdown-menu a:hover {
+  background-color: #f1f1f1;
 }

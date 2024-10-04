@@ -10,9 +10,12 @@ spring:
     hibernate:
       ddl-auto: create-drop
     open-in-view: true
-  h2:
-    console:
-      path: /h2-console
-      settings.trace: false
-      settings.web-allow-others: false
-      enabled: true
+#  h2:
+#    console:
+#      path: /h2-console
+#      settings.trace: false
+#      settings.web-allow-others: false
+#      enabled: true
+
+server:
+  8008

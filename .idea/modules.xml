@@ -2,7 +2,8 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/.idea/Sell-Clean-Food.iml" filepath="$PROJECT_DIR$/.idea/Sell-Clean-Food.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Sell-Clean-Food/Sell-Clean-Food.iml" filepath="$PROJECT_DIR$/Sell-Clean-Food/Sell-Clean-Food.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/Sell-Clean-Food_BE.iml" filepath="$PROJECT_DIR$/.idea/Sell-Clean-Food_BE.iml" />
     </modules>
   </component>
 </project>

@@ -124,3 +124,62 @@ document.addEventListener("DOMContentLoaded", () => {
     navbar.style.display = "none";
   };
 });
+
+// // Giả sử bạn đã có thông tin người dùng trong localStorage khi đăng nhập thành công
+// let currentUser = JSON.parse(localStorage.getItem("currentUser"));
+
+// window.onload = function () {
+//   const accountSection = document.getElementById("account-section");
+//   const loginLink = document.getElementById("login-link");
+//   const signupLink = document.getElementById("signup-link");
+
+//   // Kiểm tra nếu người dùng đã đăng nhập
+//   if (currentUser) {
+//     // Hiển thị "Xin chào, [Tên người dùng]" và "Đăng xuất"
+//     accountSection.innerHTML = `
+//       <span>Xin chào, ${currentUser.name}</span>
+//       <a href="#" id="logout-link">Đăng xuất</a>
+//     `;
+//     accountSection.style.display = "flex"; // Đảm bảo hiển thị dạng flexbox
+//     accountSection.style.alignItems = "center"; // Căn giữa theo chiều dọc
+
+//     const logoutLink = document.getElementById("logout-link");
+//     if (logoutLink) {
+//       logoutLink.addEventListener("click", function () {
+//         localStorage.removeItem("currentUser");
+//         window.location.href = "./dangnhap.html"; // Chuyển đến trang đăng nhập
+//       });
+//     }
+//   } else {
+//     // Nếu chưa đăng nhập, hiển thị "Đăng nhập" và "Đăng ký"
+//     loginLink.style.display = "inline";
+//     signupLink.style.display = "inline";
+//   }
+// };
+
+window.onload = function () {
+  const accountSection = document.getElementById("account-section");
+  const userGreeting = document.getElementById("user-greeting");
+  const dropdownMenu = document.getElementById("dropdown-menu");
+
+  // Kiểm tra nếu người dùng đã đăng nhập
+  if (currentUser) {
+    // Hiển thị "Xin chào, [Tên người dùng]" và menu thả xuống
+    accountSection.style.display = "flex";
+    accountSection.style.alignItems = "center";
+
+    // Khi bấm vào "Xin chào", hiển thị hoặc ẩn menu thả xuống
+    userGreeting.addEventListener("click", function () {
+      dropdownMenu.classList.toggle("hidden");
+    });
+
+    // Đăng xuất
+    const logoutLink = document.getElementById("logout-link");
+    if (logoutLink) {
+      logoutLink.addEventListener("click", function () {
+        localStorage.removeItem("currentUser");
+        window.location.href = "./dangnhap.html";
+      });
+    }
+  }
+};
